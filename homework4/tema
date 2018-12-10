@@ -9,7 +9,7 @@ ex:
 
 Tema 2:
 
-Scrieti un program care calculeaza suma valorilor dintr-un array de numere.
+Scrieti un program care calculeaza suma valorilor dintr-un array de numere. Nota: pentru parcurgere folositi un for.
 
 ex:
 [3, 4, 5] -> 12
