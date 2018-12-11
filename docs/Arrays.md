@@ -1,4 +1,5 @@
 # Arrays 
+
 An array is an ordered collection of data (either primitive or object depending upon 
 the language). Arrays are used to store multiple values in a single variable. This is 
 compared to a variable that can store only one value. 
@@ -39,7 +40,7 @@ the elements of the array:
 ```javascript
 // note that we start from 0 and stop at length - 1
 for (var i = 0; i < strings.length; i++) {
-    console.log(strings[i])
+    console.log(strings[i]);
 }
 // "one"
 // "two"
@@ -96,3 +97,25 @@ The functions [.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScri
  console.log(last);
  // "iulia"
  ```
+ 
+ Finally, we can use [.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+ to insert or delete a number of values from the array:
+ 
+```javascript
+
+var a = [ 3, 2, 6, 5, 8];
+
+// remove the 6
+a.splice(2, 1) // start at index 2, delete 1 element
+// [ 3, 2, 5, 8 ]
+
+
+// insert a 9 and a 10 after 2
+a.splice(2, 0, 9, 10) // start at index 2, delete 0 elements, insert 9, 10
+// [ 3, 2, 9, 10, 5, 8 ]
+
+// remove 2 and 9  and replace them with 11
+a.splice(1, 2, 11)
+// [ 3, 11, 10, 5, 8 ]
+
+```
