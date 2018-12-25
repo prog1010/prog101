@@ -30,9 +30,9 @@ Ex: reverse_case("Happy New Year") -> "hAPPY nEW yEAR"
 
 5. Scrieti o functie care afiseaza toate cheile unui obiect.
 
-Ex: ```var song = {
-	"title": "Let It Snow! Let It Snow! Let It Snow!",
-	"author": "Frank Sinatra"
+Ex: ```var song = {  
+	"title": "Let It Snow! Let It Snow! Let It Snow!",  
+	"author": "Frank Sinatra"  
 }```
 
 -> "title", "author"
