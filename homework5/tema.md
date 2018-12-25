@@ -1,28 +1,22 @@
 1. Scrieti o functie care afiseaza un bradut de Craciun:
 
-  &nbsp;&nbsp;\*&nbsp;&nbsp;
-  
-  &nbsp;\*\*\*&nbsp;
-  
-  \*\*\*\*\*
+  &nbsp;&nbsp;\*&nbsp;&nbsp;  
+  &nbsp;\*\*\*&nbsp;  
+  \*\*\*\*\*  
 
 2. Scrieti o functie care afiseaza un bradut de Craciun cu inaltimea specificata de utilizator.
 
 Ex: height = 2
 
- &nbsp;\*&nbsp;
- 
+ &nbsp;\*&nbsp;  
  \*\*\*
 
  height = 4
 
-&nbsp;&nbsp;&nbsp;&nbsp;*
-
-&nbsp;&nbsp;&nbsp;***
-
-&nbsp;&nbsp;*****
-
-&nbsp;*******
+&nbsp;&nbsp;&nbsp;&nbsp;*  
+&nbsp;&nbsp;&nbsp;***  
+&nbsp;&nbsp;*****   
+&nbsp;*******  
 
 
 3. Scrieti o functie care **afiseaza** primele n elemente dintr-un array.
@@ -36,20 +30,17 @@ Ex: reverse_case("Happy New Year") -> "hAPPY nEW yEAR"
 
 5. Scrieti o functie care afiseaza toate cheile unui obiect.
 
-Ex: ```
-var song = { . 
-	"title": "Let It Snow! Let It Snow! Let It Snow!",  
-	"author": "Frank Sinatra" . 
-}
-```
+Ex: ```var song = {
+	"title": "Let It Snow! Let It Snow! Let It Snow!",
+	"author": "Frank Sinatra"
+}```
 
--> title, author
+-> "title", "author"
 
 
 6. Scrieti o functie care afiseaza pentru fiecare carte dintr-un array daca a fost citita sau nu (*readingStus*).
 
-Ex: ````
-var library = [ 
+Ex: ```var library = [ 
    {
        author: 'Charles Dickens',
        title: 'A Christmas Carol',
@@ -64,5 +55,4 @@ var library = [
        author: 'The Little Match Girl',
        title:  'Hans Christian Andersen', 
        readingStatus: true
-   }];
-
+   }];```
