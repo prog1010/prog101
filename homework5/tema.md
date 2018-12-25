@@ -41,7 +41,7 @@ var song = {
 &rarr; "title", "author"
 
 
-6. Scrieti o functie care afiseaza pentru fiecare carte dintr-un array daca a fost citita sau nu (*readingStus*).
+6. Scrieti o functie care afiseaza pentru fiecare carte dintr-un array daca a fost citita sau nu (*readingStatus*).
 
 Ex:
 
