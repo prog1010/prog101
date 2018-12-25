@@ -1,22 +1,28 @@
 1. Scrieti o functie care afiseaza un bradut de Craciun:
 
-  &nbsp;&nbsp;\*&nbsp;&nbsp;  
-  &nbsp;\*\*\*&nbsp;  
-  \*\*\*\*\*  
+```javascript
+  *
+ ***
+*****
+```
 
 2. Scrieti o functie care afiseaza un bradut de Craciun cu inaltimea specificata de utilizator.
 
 Ex: height = 2
 
- &nbsp;\*&nbsp;  
- \*\*\*
+```javascript
+  *
+ ***
+```
 
  height = 4
 
-&nbsp;&nbsp;&nbsp;&nbsp;*  
-&nbsp;&nbsp;&nbsp;***  
-&nbsp;&nbsp;*****   
-&nbsp;*******  
+```javascript
+   *
+  ***
+ *****
+*******
+``` 
 
 
 3. Scrieti o functie care **afiseaza** primele n elemente dintr-un array.
