@@ -30,17 +30,21 @@ Ex: reverse_case("Happy New Year") -> "hAPPY nEW yEAR"
 
 5. Scrieti o functie care afiseaza toate cheile unui obiect.
 
-Ex: ```var song = {  
-	"title": "Let It Snow! Let It Snow! Let It Snow!",  
-	"author": "Frank Sinatra"  
-}```
+Ex: 
+
+```javascript
+var song = {
+    "title": "Let It Snow! Let It Snow! Let It Snow!",
+    "author": "Frank Sinatra"
+```
 
 -> "title", "author"
 
 
 6. Scrieti o functie care afiseaza pentru fiecare carte dintr-un array daca a fost citita sau nu (*readingStus*).
 
-Ex: ```var library = [ 
+Ex: ```javascript
+var library = [ 
    {
        author: 'Charles Dickens',
        title: 'A Christmas Carol',
