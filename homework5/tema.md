@@ -21,12 +21,12 @@ Ex: height = 2
 
 3. Scrieti o functie care **afiseaza** primele n elemente dintr-un array.
 
-Ex: first([7, 9, 0, -2], 3) -> [7, 9, 0] 
+Ex: first([7, 9, 0, -2], 3) &rarr; [7, 9, 0] 
 
 
 4. Scrieti o functie care primeste un String ca si parametru si **returneaza** un String cu case-ul fiecarui caracter inversat.
 
-Ex: reverse_case("Happy New Year") -> "hAPPY nEW yEAR"
+Ex: reverse_case("Happy New Year") &rarr; "hAPPY nEW yEAR"
 
 5. Scrieti o functie care afiseaza toate cheile unui obiect.
 
@@ -38,7 +38,7 @@ var song = {
     "author": "Frank Sinatra"
 ```
 
--> "title", "author"
+&rarr; "title", "author"
 
 
 6. Scrieti o functie care afiseaza pentru fiecare carte dintr-un array daca a fost citita sau nu (*readingStus*).
@@ -64,4 +64,4 @@ var library = [
    }
 ]
 ```
--> true, false, true
+&rarr; true, false, true
