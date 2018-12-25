@@ -48,7 +48,8 @@ var song = {
 
 6. Scrieti o functie care afiseaza pentru fiecare carte dintr-un array daca a fost citita sau nu (*readingStus*).
 
-Ex: ```var library = [ 
+Ex: ````
+var library = [ 
    {
        author: 'Charles Dickens',
        title: 'A Christmas Carol',
@@ -63,4 +64,5 @@ Ex: ```var library = [
        author: 'The Little Match Girl',
        title:  'Hans Christian Andersen', 
        readingStatus: true
-   }];```
+   }];
+
