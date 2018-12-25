@@ -1,7 +1,9 @@
 1. Scrieti o functie care afiseaza un bradut de Craciun:
 
   &nbsp;&nbsp;\*&nbsp;&nbsp;
+  
   &nbsp;\*\*\*&nbsp;
+  
   \*\*\*\*\*
 
 2. Scrieti o functie care afiseaza un bradut de Craciun cu inaltimea specificata de utilizator.
@@ -9,13 +11,17 @@
 Ex: height = 2
 
  &nbsp;\*&nbsp;
+ 
  \*\*\*
 
  height = 4
 
 &nbsp;&nbsp;&nbsp;&nbsp;*
+
 &nbsp;&nbsp;&nbsp;***
+
 &nbsp;&nbsp;*****
+
 &nbsp;*******
 
 
