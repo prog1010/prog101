@@ -44,9 +44,11 @@ Ex:
 var song = {
     "title": "Let It Snow! Let It Snow! Let It Snow!",
     "author": "Frank Sinatra"
+}
 ```
-
 &rarr; "title", "author"
+
+Consultati [Statements and Declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements#Iterations)
 
 
 6. Scrieti o functie care afiseaza pentru fiecare carte dintr-un array daca a fost citita sau nu (*readingStatus*).
