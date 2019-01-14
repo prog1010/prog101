@@ -7,6 +7,7 @@ we must perform two steps:
 
 Read about:
 - [Function definition](#function-definition)
+- [Variable number of arguments](#variable-number-of-arguments)
 - Local variables
 
 
