@@ -3,7 +3,7 @@
 In JavaScript objects are collections of values (similar to arrays or lists) that we can access by their name.
 The names that we assign to values are also called *keys* or *properties* of the object.
 
-The data structure behind an object implementation is also called a *dictionary* or *m map** which we will
+The data structure behind an object implementation is also called a *dictionary* or *map** which we will
 discuss later.
 
 Just like arrays provide fast access to values based on their position (or index), objects provide fast access to 
@@ -64,10 +64,10 @@ using **string** values and the JavaScript syntax offers two ways of doing so:
 
 ```javascript
 // method 1: using an identifier
-student.firstName; //iulia
+student.firstName; //Iulia
 
 // method 2: using a string value
-student["firstName"]; //iulia
+student["firstName"]; //Iulia
 ```
 Although keys are implicitly values, we can use identifiers as keys with the *dot notation*, as shown above with
 `method 1`. Identifiers are typically not data (or values, they are part of the syntax) but using them to extract values from an object determines
@@ -77,11 +77,14 @@ Using a string as a key requires the use of the **square brackets** (like for ar
 advantages in situations where we need to construct the key from other values or use keys stored in other variables:
 
 ```javascript
+var prop = "firstName";
+console.log(student[prop]); // ~ student["firstName"] -> Iulia
+
 // here we want to acces the firstName and lastName
 // by using the `Name` part from a variable
 
 var suffix = "Name";
-student["first" + suffix]; // ~ student["firstName"] -> iulia
+student["first" + suffix]; // ~ student["firstName"] -> Iulia
 student["last" + suffix]; // ~ student["lastName"] -> andra
 ```
 
@@ -93,13 +96,10 @@ var properties = ["firstName", "lastName"];
 
 // we cycle through the list of properties 
 for (var i = 0; i < properties.length; i++) {
-    
     // we use values from the list: properties[i]
     var key = properties[i];
-    
     // we use the key that we computed to access the object value
     console.log(student[key]);
-    
     // we can also write this in a more compact way
     // console.log(student[properties[i]]);
 }
@@ -140,17 +140,13 @@ It is very easy to implement this function ourselves. Let's identify what this f
 * returns the array
 ```javascript
 function keys(obj) {
-    
     // create an empty array
     var result = []; 
-   
     // cycle through the object properties
     for (var i in obj) {
-        
         // add each key to the end of the array
         result.push(i);    
     }
-   
     // return the array
     return result;
 }
@@ -181,6 +177,24 @@ An object property can hold any value that a JavaScript variable can hold, class
     * `Function`
     * Regular expressions
     * ...
+
+The type of a value (not limited to an object property, this works for any value) can be determined at runtime 
+by using the `typeof` operator in an unary expression:
+
+```javascript
+var i = 3;
+var name = "Iulia"
+var ok = true;
+
+typeof i; // "number"
+typeof 6; // "number"
+typeof name; // "string"
+typeof [1, 2, 3]; // "object"
+typeof student; // "object"
+```
+
+Evaluating such expressions yields a string result. It can sometimes be useful to determine the type of a 
+value at runtime, although this pattern is discouraged in practice and should be avoided.
 
 To read more about types in JavaScript, check out 
 [JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) on MDN.
@@ -248,7 +262,7 @@ var iuliaCopy = {
 // now we can change the new object without altering the old one:
 iuliaCopy.name = "Vali"
 
-console.log(iuliaCopy.name); //vali
+console.log(iuliaCopy.name); //Vali
 console.log(iulia.name); // Iulia
 ```
 
@@ -279,5 +293,10 @@ vali.name = "Vali"; // update the name
 console.log(iuila.name); // Iulia
 console.log(vali.name); // Vali
 ```
-## Examples
-TBD
+
+The JavaScript Runtime API offers an utility function called 
+[Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+(see link for more details) which copies properties from one object to another, similarly to how our own `copy()` function does:
+```javascript
+var iuliaCopy = Object.assign({}, iulia);
+```
