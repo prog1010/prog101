@@ -1,4 +1,4 @@
-#Objects
+# Objects
 
 In JavaScript objects are collections of values (similar to arrays or lists) that we can access by their name.
 The names that we assign to values are also called *keys* or *properties* of the object.
@@ -9,7 +9,7 @@ discuss later.
 Just like arrays provide fast access to values based on their position (or index), objects provide fast access to 
 values based on their name.
 
-##Creating objets
+## Creating objets
 
 Objects are created in JavaScript by using the *Object Notation*, that is, grouping a list of `key: value` pairs 
 between curly brackets `{}` to obtain:
@@ -56,7 +56,7 @@ var student2 = student1;
 // the same refernence to the object { name: "Vali" }
 ```
 
-##Keys (properties)
+## Keys (properties)
 
 We have seen that in order to access information inside an array, we need to provide a **positive integer** (a 
 round number >= 0) between *square brackets*; accessing values of an objects properties is similarly achieved by
@@ -105,7 +105,7 @@ for (var i = 0; i < properties.length; i++) {
 }
 ```
 
-####Getting all the keys
+#### Getting all the keys
 Sometimes it is useful to see all the keys that an object contains, and we can use a special version of the 
 `for` loop to do this:
 
@@ -165,7 +165,7 @@ console.log(ks);
 ```json
 ["firstName", "lastName",  "age",  "gender", "graduatedJSClass"]
 ```
-##Property Values
+## Property Values
 
 An object property can hold any value that a JavaScript variable can hold, classified as such:
 * primitives
@@ -194,7 +194,7 @@ console.log(keys);
 ```json
 ["Iulia", "Andra",  30,  "F", true]
 ```
-##Working with objects
+## Working with objects
 
 At any time we can add, modify or delete properties of an object that we hold a reference to:
 
@@ -211,7 +211,7 @@ At any time we can add, modify or delete properties of an object that we hold a 
     delete student.address;
     ```
 
-####Copying objects
+#### Copying objects
 We have discussed earlyer that using an assignment expression (`a = b`) does not actually copy an object but
 only copies the reference to the object, so this has the following consequence:
 
@@ -279,5 +279,5 @@ vali.name = "Vali"; // update the name
 console.log(iuila.name); // Iulia
 console.log(vali.name); // Vali
 ```
-##Examples
+## Examples
 TBD
