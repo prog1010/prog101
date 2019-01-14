@@ -71,7 +71,7 @@ New York, New York
 
 ### #6*:
 The variable `x` contains a positive integer. Count how many digits the number has and print the result.\
-Example:
+Examples:
 ```
 123 -> 3
 234623 -> 6
