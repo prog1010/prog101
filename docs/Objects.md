@@ -1,6 +1,6 @@
 # Objects
 
-In JavaScript objects are collections of values (similar to arrays or lists) that we can access by their name.
+In JavaScript, objects are collections of values (similar to arrays or lists) that we can access by their name.
 The names that we assign to values are also called *keys* or *properties* of the object.
 
 The data structure behind an object implementation is also called a *dictionary* or *map** which we will
@@ -9,7 +9,7 @@ discuss later.
 Just like arrays provide fast access to values based on their position (or index), objects provide fast access to 
 values based on their name.
 
-## Creating objets
+## Creating objects
 
 Objects are created in JavaScript by using the *Object Notation*, that is, grouping a list of `key: value` pairs 
 between curly brackets `{}` to obtain:
@@ -24,15 +24,15 @@ between curly brackets `{}` to obtain:
 For example, say we wanted to create a `student` object and assign it to a variable:
 ```javascript
 var student = {
-    firstName: "Iulia",
-    lastName: "Andra",
+    firstName: "Jane",
+    lastName: "Smith",
     age: 30,
     gender: "F",
     graduatedJSClass: true
 }
 ```
 Declaring an object on the right side (`b`) of an assignment expression (`a = b`) has the following effect:
-* the object is stored into memory and a reference (think of this as the location inside the memory where 
+* the object is stored into memory and a **reference** (think of this as the location inside the memory where 
 the object is stored) is produced
 * the **reference** to the object is stored in `a`
 
@@ -47,45 +47,48 @@ the same reference:
 
 ```javascript
 var student1 = {
-    name: "Vali"
+    name: "John Smith"
 }
 
 var student2 = student1;
 
 // here, both student1 and student2 store
-// the same refernence to the object { name: "Vali" }
+// the same refernence to the object { name: "John Smith" }
 ```
 
 ## Keys (properties)
 
 We have seen that in order to access information inside an array, we need to provide a **positive integer** (a 
-round number >= 0) between *square brackets*; accessing values of an objects properties is similarly achieved by
+round number >= 0) between *square brackets* `[]`; accessing values of an objects properties is similarly achieved by
 using **string** values and the JavaScript syntax offers two ways of doing so:
 
 ```javascript
 // method 1: using an identifier
-student.firstName; //Iulia
+student.firstName; //Jane
 
 // method 2: using a string value
-student["firstName"]; //Iulia
+student["firstName"]; //Jane
 ```
 Although keys are implicitly values, we can use identifiers as keys with the *dot notation*, as shown above with
 `method 1`. Identifiers are typically not data (or values, they are part of the syntax) but using them to extract values from an object determines
 an implicit conversion to a value type (which is `string`).
 
-Using a string as a key requires the use of the **square brackets** (like for arrays) and this provides certain
-advantages in situations where we need to construct the key from other values or use keys stored in other variables:
+Using a string as a key is done with the help of **square brackets** `[]` (like for arrays) and this provides certain
+advantages in situations where we need expressions to construct the keys:
 
 ```javascript
-var prop = "firstName";
-console.log(student[prop]); // ~ student["firstName"] -> Iulia
+// the value of the key is stored in a variable
 
-// here we want to acces the firstName and lastName
+var prop = "firstName";
+console.log(student[prop]); // ~ student["firstName"] -> Jane
+```
+```javascript
+// we want to acces the firstName and lastName
 // by using the `Name` part from a variable
 
 var suffix = "Name";
-student["first" + suffix]; // ~ student["firstName"] -> Iulia
-student["last" + suffix]; // ~ student["lastName"] -> andra
+student["first" + suffix]; // ~ student["firstName"] -> Jane
+student["last" + suffix]; // ~ student["lastName"] -> Smith
 ```
 
 Using `method 2` also allows us to use a list of properties stored somewhere else:
@@ -124,8 +127,10 @@ we can print it with `console.log()`. As expected, all the values which `i` take
 "graduatedJSClass"
 ```
 
-The JavaScript Runtime API provides a function that collects all the keys and stores them in a list (array) called 
-[Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys):
+The JavaScript Runtime API provides 
+[Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys),
+a function that collects all the keys and stores them in a list (array): 
+
 ```javascript
 var keys = Object.keys(student);
 console.log(keys);
@@ -183,14 +188,18 @@ by using the `typeof` operator in an unary expression:
 
 ```javascript
 var i = 3;
-var name = "Iulia"
+var name = "Jane"
 var ok = true;
+function f() {
+    console.log('f');
+}
 
 typeof i; // "number"
 typeof 6; // "number"
 typeof name; // "string"
 typeof [1, 2, 3]; // "object"
 typeof student; // "object"
+typeof f; // "function"
 ```
 
 Evaluating such expressions yields a string result. It can sometimes be useful to determine the type of a 
@@ -218,7 +227,7 @@ At any time we can add, modify or delete properties of an object that we hold a 
     ```
 * updating properties
     ```javascript
-    student.firstName = "Maria";
+    student.firstName = "Alice";
     ```
 * deleting properties
     ```javascript
@@ -226,44 +235,43 @@ At any time we can add, modify or delete properties of an object that we hold a 
     ```
 
 #### Copying objects
-We have discussed earlyer that using an assignment expression (`a = b`) does not actually copy an object but
+We have discussed earlier that using an assignment expression (`a = b`) does not actually copy an object but
 only copies the reference to the object, so this has the following consequence:
 
 ```javascript
-var iulia = {
-    name: "Iulia"
+var alice = {
+    name: "Alice"
 }
 
-console.log(iulia.name);
-// Iulia
+console.log(alice.name); // Alice
 
-var vali = iulia;
-vali.name = "Vali";
+var john = alice;
+john.name = "John";
 
-console.log(vali.name) // Vali
-console.log(iulia.name) // also Vali
+console.log(john.name); // John
+console.log(alice.name); // also John
 ```
 
-We can see that, after changing the `name` property from `"Iulia"` to `"Vali"`, both `var iulia` and `var vali` share the
-same name because they are, in fact, pointing to the same memory location of a single object `{ name: "Vali" }`
+We can see that, after changing the `name` property from `"Alice"` to `"John"`, both `var alice` and `var john` share the
+same name because they are, in fact, pointing to the same memory location of a single object `{ name: "John" }`
 
-Therefore, if our intention was to actually obtain an independent object but starting from the original `iulia`,
+Therefore, if our intention was to actually obtain an independent object but starting from the original `alice`,
 we would have had to:
 
 ```javascript
 
 // create a new object
-var iuliaCopy = {
-    name: iulia.name
+var aliceCopy = {
+    name: alice.name
     // and assign the value from iulia.name
     // to the `name` property of the new object 
 }
 
 // now we can change the new object without altering the old one:
-iuliaCopy.name = "Vali"
+aliceCopy.name = "John"
 
-console.log(iuliaCopy.name); //Vali
-console.log(iulia.name); // Iulia
+console.log(aliceCopy.name); // John
+console.log(alice.name); // Iulia
 ```
 
 In this example, where we have a small number of keys that we need to copy, we can do it by hand. Oftenly though,
@@ -286,17 +294,17 @@ function copy(source) {
     return target;
 }
 
-// now let's copy iulia
-var vali = copy(iulia);
-vali.name = "Vali"; // update the name
+// now let's copy alice
+var john = copy(alice);
+john.name = "John"; // update the name
 
-console.log(iuila.name); // Iulia
-console.log(vali.name); // Vali
+console.log(alice.name); // Alice
+console.log(john.name); // John
 ```
 
 The JavaScript Runtime API offers an utility function called 
 [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 (see link for more details) which copies properties from one object to another, similarly to how our own `copy()` function does:
 ```javascript
-var iuliaCopy = Object.assign({}, iulia);
+var aliceCopy = Object.assign({}, alice);
 ```
