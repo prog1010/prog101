@@ -1,11 +1,11 @@
 # Rectangles
 
-There are multiple ways in which we can model a rectangle in programming. Here are two models:
+There are multiple ways in which we can model a rectangle in code. Here are two models:
 
 ![Rectangle representation](./img/rectangle.svg)
 
 In the first model we store the `(x, y)` pair where the rectangle starts and its `width` and `height`. A 
-Javascript objet might look like this:
+Javascript object might look like this:
 ```javascript
 {
     x: 20,
@@ -55,8 +55,7 @@ Find the rectangle that has the largest area. To make things easier, you can imp
 the area that would work like this:
 ```javascript
 var r = rectangle(0,0,10,20);
-console.log(r.area()); 
-// 200
+r.area(); // 200
 ```
 
 ## #4
@@ -75,7 +74,7 @@ var r3 = rectangle(5, 15, 20, 15);
 
 ```javascript
 r1.intersects(r2); // false
-r2.intersects(r3); // false
+r2.intersects(r1); // false
 r1.intersects(r3); // true
 r3.interects(r2); // true
 ```
