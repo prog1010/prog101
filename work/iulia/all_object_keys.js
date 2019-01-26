@@ -11,7 +11,6 @@ function all_object_keys(obiect){
 
 }
 
-all_object_keys(3);
 
 all_object_keys ({
 	type: {
@@ -19,4 +18,5 @@ all_object_keys ({
 		prop2: 2
 	}, 
 	model: 3, 
-	color: 'blue'});
+	color: 'blue'
+});
