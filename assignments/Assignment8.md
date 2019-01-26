@@ -36,5 +36,9 @@ Now add a `canFly` method to your `Penguin` and inside that method, use an if / 
 
 Write a JavaScript function to find the longest string from an given array of strings. 
 
+longestString(["that", "don't", "impress", "me", "much"]): "impress"
+
 # #5
 Write a JavaScript function to remove all characters from a given string that appear more than once.
+
+removeDuplicates("Timisoara"): "Timsoar"
