@@ -27,4 +27,14 @@ Call `sayHello` for different penguins.
 Now use an array to store these `Penguin` objects and iterate over them to `sayHello`.
 
 ### #4 
-Now add a `canFly` method to your `Penguin` and inside that method, use an if / else statement to print "I can fly!" to the console if your penguin's canFly property is true, or "No flying for me!" if its canFly property is false. *Note:* Try to do this without modifying the original object (check the docs section on *Working with objects*).
+Modify your `Penguin` objects to add a `canFly` property that tells you if a penguin can fly or not.
+
+### #5 
+Now add a `canFly` method to your `Penguin` and inside that method, use an if / else statement to print "I can fly!" to the console if your penguin's `canFly` property is true, or "No flying for me!" if its `canFly` property is false. *Note:* Try to do this without modifying the original object (check the docs section on *Working with objects*).
+
+# #4
+
+Write a JavaScript function to find the longest string from an given array of strings. 
+
+# #5
+Write a JavaScript function to remove all characters from a given string that appear more than once.
