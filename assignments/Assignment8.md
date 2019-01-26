@@ -1,17 +1,17 @@
 # #1
 Write a function pluralize that takes in two arguments, a number and a word, and returns the plural (if there is more than one).
 
-pluralize(5, 'cat'): '5 cats'
-pluralize(1, 'cat'): '1 cat'
-pluralize(7, 'turtle'): '7 turtles'
+pluralize(5, 'cat'): '5 cats'   
+pluralize(1, 'cat'): '1 cat'    
+pluralize(7, 'turtle'): '7 turtles' 
 
 # #2
 Write a function named internationalize that:
 	takes 1 argument, a language code (e.g. "es", "ro", de", "en")
 	returns "Pineapple" for the given language, for atleast the above 4 languages. It should default to returning English.
 
-internationalize("ro"): 'Ananas'
-internationalize("en"): 'Pineapple'
+internationalize("ro"): 'Ananas'  
+internationalize("en"): 'Pineapple'  
 internationalize(): 'Pineapple'  
 
 # #3
