@@ -33,12 +33,12 @@ Create a new img element and set its src attribute to a picture of you. Append t
 
 ### #2
 
-Keep track of which books you read and which books you want to read!  
+*Keep track of which books you read and which books you want to read!*  
 
 Create a webpage with an h1 of "My Book List".  
 Add a script tag to the bottom of the page, where all your JS will go.  
 Copy the array of books from the Assignment 5 (exercise 6).  
 Iterate through the array of books. For each book, create a p element with the book title and author and append it to the page.  
-*Bonus*: Use a ul and li to display the books.  
-*Bonus*: add a property to each book with the URL of the book cover, and add an img element for each book on the page.  
-*Bonus*: Change the style of the book depending on whether you have read it or not.
+__Bonus__: Use a ul and li to display the books.  
+__Bonus__: add a property to each book with the URL of the book cover, and add an img element for each book on the page.  
+__Bonus__: Change the style of the book depending on whether you have read it or not.
